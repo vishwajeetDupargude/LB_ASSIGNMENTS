@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void multiply(int iNo)
+void OddDisplay(int iNo)
 {
     int iCnt = 0;
     if (iNo <= 0)
@@ -8,10 +8,15 @@ void multiply(int iNo)
         iNo= -iNo;
     }
 
-    for(iCnt=1; iCnt<=5; iCnt++)
+    for(iCnt=1; iCnt<= (iNo/2); iCnt++)
     {
-        printf("%d\n",iNo*iCnt);    
+    if ((iNo%iCnt) !=0)
+        {
+        printf("%d\n",iCnt);
+        }
     }
+
+    printf("\n");
 }
 
 int main()
@@ -19,7 +24,7 @@ int main()
     int iValue = 0;
     printf("Enter number:");
     scanf("%d",&iValue);
-    multiply(iValue);
+    OddDisplay(iValue);
 
     return 0;
 }
